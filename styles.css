@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* login page */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+.sidebar {
+  width: 30%;
+  /* height: 100vh; */
+   background: #764ba2;
+}
+.main {
+  /* margin-top: 5%; */
+  /* height: 100vh; */
+  width: 70%;
+  background-color: #f8f9fa;
+}
+.brand {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.logo {
+  width: 100px;
+  margin-top: 40%;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+.login_form {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand h1{
+    margin: 10px 0;
+    color:#fff;
+    font-weight: bolder;
+    font-family: 'DM Serif Display';
+}
+.brand p{
+    color: #e6e4e4;
+    font-family: "Prata";
+    font-family: 'IBM Plex Serif';
+}
+.login_form h2{
+    margin: 15% 0;
+    text-align: center;
+    font-family: 'Playfair Display';
+    text-transform: uppercase;
+}
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.password {
+  position: relative;
+}
+.password i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+/* Subtle hover effect for the icon */
+.password-wrapper i:hover {
+    color: #333;
+}
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #764ba2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #442e5c;
+}
+
+.forgot-link {
+  font-size: 14px;
+  color: #764ba2;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+/* responsive login page */
+/* 📱 Small screen */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column; /* stack items */
+  }
+
+  .sidebar {
+    width: 100%;
+    order: -1; /* 👈 moves sidebar to top */
+  }
+  .main{
+    width: 100%;
+  }
+  .logo {
+  width: 100px;
+  margin-top: 10%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.brand{
+    margin-bottom: 10px;
+}
+.login_form {
+  flex: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_form h2{
+    margin: 5% 0;
+    text-align: center;
+    font-family: 'Playfair Display';
+    text-transform: uppercase;
+}
+}
+
+/* Dashboard css */
+.sidebar-2 {
+  width: 15%;
+  /* height: 100vh; */
+   background: #764ba2;
+}
+
+.main-2 {
+  /* margin-top: 5%; */
+  /* height: 100vh; */
+  width: 85%;
+  background-color: #f8f9fa;
+}
+  .logo-2 {
+  width: 100px;
+  margin-top: 10%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.nav a{
+    color:#f8f9fa;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10%;
+}
+/* .nav a:hover{
+    color: #764ba2;
+    background-color: white;
+} */
+.nav:hover {
+  background-color: #f8f9fa;
+  border-radius: 50px;
+  padding:3%;
+   border:2px solid #f8f9fa;
+}
+
+.nav:hover a {
+      font-family: 'DM Serif Display';
+    color: #764ba2;
+}
+
+.nav{
+    margin:20% 0;
+}
+.topbar{
+    background-color: #764ba2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.topbar h3, .topbar span{
+    font-size: 24px;
+    font-family: "Playfair Display";
+    color:#e6e4e4;
+    border-left: 1px solid #f8f9fa;
+    padding-left: 20px;
+}
+/* cards css */
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin:10px 7px;
+    width:99%;
+    gap:5%;
+}
+
+ .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .card-header {
+    background-color: #442e5c;
+    color: white;
+    padding: 20px;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .card-body {
+    padding: 9px 5px;
+    text-align: center;
+  }
+
+  .card-body .number {
+    font-size: 29px;
+    font-weight: bold;
+    color: #764ba2;
+    margin: 0;
+  }
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title .icon i {
+  color: #f8f9fa;
+}
+  .card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease;
+  }
+  /* bar graph */
+  .charts{
+    width: 100%;
+    /* border: 2px solid #442e5c; */
+    display: flex;
+    flex-direction: row;
+  }
+.charts_box {
+  width: 50%;
+  /* border: 2px solid #442e5c; */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end; /* Keeps bars grounded at the bottom */
+  height: 300px;
+  gap: 5px;            /* Adds consistent space between bars */
+  padding-bottom: 40px; /* Room for rotated labels */
+}
+.entire{
+  width:90%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top:40px;
+  margin-right:10px
+}
+
+.charts_child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; 
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 30%;
+  background-color: #764ba2; /* Hardcoded color */
+  border-radius: 4px 4px 0 0;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.bar:hover {
+  background-color: #667eea; /* Hardcoded hover color */
+  transform: scaleX(1.05);
+}
+
+.bar:hover::after {
+  content: attr(data-value);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 14px;
+  color: #667eea;
+}
+
+.label {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #666;
+  font-weight: 600;
+  display: block;
+  min-width: 80px;
+  transform: rotate(-25deg);
+  white-space: nowrap;
+}
+
+/* sales css */
+.navHead{
+  text-align: center;
+  color:#f8f9fa;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.customerInfo{
+background-color: #f8f9fa;
+/* box-shadow: 8px 8px 12px #764ba2; */
+width:99%;
+border:0.1px solid black;
+padding:10px;
+margin: 10px 12px;
+}
+.customerInfo h2{
+  margin:3px 10px;
+}
+.customerKid{
+  display: grid;
+  grid-template-columns: 2fr 2fr ;
+  /* grid-template-rows: 2fr 2fr; */
+  column-gap: 30px;
+  /* row-gap: 20px; */
+  /* background: linear-gradient(to right, #f3e7ff, #fff); */
+  padding: 10px;
+  width: 100%;
+}
+.customerkids{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.customerkids input{
+  height:35px;
+  border-radius: 8px;
+  padding:0 10px;
+}
+.customerkids label{
+  font-weight: bolder;
+  font-size:18px
+}
+.customerkids input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  /* position: relative; */
+  cursor: pointer;
+}
+.customerKids{
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr auto ;
+  /* grid-template-rows: 2fr 2fr; */
+  column-gap: 30px;
+  /* row-gap: 20px; */
+  /* background: linear-gradient(to right, #f3e7ff, #fff); */
+  padding: 10px;
+  width: 100%;
+}
+.pdtbtn{
+  background-color: #442e5c;
+  color:#fff;
+  font-weight: bolder;
+  padding: 10px;
+  margin-top: 25px;
+}
