@@ -64,33 +64,71 @@
         <form action="">
           <div class="customerKids">
             <div class="customerkids">
-              <label for="customername">Product</label>
+              <label for="productName">Product</label>
               <input
                 type="search"
-                id="customername"
+                id="productName"
                 placeholder="🔍Search Product"
                 required
               />
             </div>
             <div class="customerkids">
-              <label for="customername"> Quantity</label>
-              <input type="number" id="customername" placeholder="0" required />
+              <label for="quantity"> Quantity</label>
+              <input type="number" id="quantity" placeholder="0" required />
             </div>
             <div class="customerkids">
-              <label for="customername"> Price(UGX) </label>
+              <label for="price"> Price(UGX) </label>
               <input
                 type="text"
-                id="customername"
+                id="price"
                 placeholder="Auto"
                 required
               />
             </div>
             <div class="customerkids">
-              <button type="submit" class="pdtbtn">+</button>
+              <button type="submit" class="pdtbtn" onclick="addRow()">+</button>
             </div>
           </div>
         </form>
       </div>
     </div>
+    <div class="customerInfo">
+      <h2>
+        <i
+          class="fa-solid fa-cart-shopping"
+          style="color: rgb(177, 151, 252)"
+        ></i
+        >Cart Items 
+      </h2>
+      <div class="customerBox">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- cart items go here -->
+                 <tr><td>Student 1</td><td>78</td><td>85</td><td>88</td><td>76</td></tr>
+    <tr><td>Student 2</td><td>67</td><td>74</td><td>80</td><td>72</td></tr>
+    <tr><td>Student 3</td><td>92</td><td>89</td><td>94</td><td>88</td></tr>
+    <tr><td>Student 4</td><td>55</td><td>60</td><td>58</td><td>59</td></tr>
+    <tr><td>Student 5</td><td>81</td><td>77</td><td>85</td><td>83</td></tr>
+    <tr><td>Student 6</td><td>73</td><td>70</td><td>75</td><td>74</td></tr>
+    <tr><td>Student 7</td><td>88</td><td>91</td><td>86</td><td>89</td></tr>
+  
+          </tbody>
+        </table>
+        <form class="customerkids2">
+          <label for="total">Total In Cart</label>
+          <input type="text" id="total" inputmode="numeric" pattern="[0-9]*">
+        </form>
+      </div>
+    </div>
+  
   </body>
 </html>
