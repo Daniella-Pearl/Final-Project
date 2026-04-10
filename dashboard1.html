@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyondoStock Pro | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   
+</head>
+<body>
+    <div class="container">
+
+    <nav class="sidebar">
+        <div class="brand">
+            <img src="./images/generated-1774986091754.png" alt="NyondoStock" class="logo">
+            <h1>NyondoStock System</h1>
+          <p>Welcome back! Please enter your details.</p>
+
+        </div>
+        <a href="#" class="nav-link"><i class="fa fa-th-large"></i> <span>Dashboard</span></a>
+        <a href="#" class="nav-link"><i class="fa fa-box"></i> <span>Stock Management</span></a>
+        <a href="#" class="nav-link"><i class="fa fa-shopping-cart"></i> <span>Sales Management</span></a>
+        <a href="#" class="nav-link"><i class="fa fa-users"></i> <span>Customer Scheme</span></a>
+        <a href="#" class="nav-link"><i class="fa fa-chart-line"></i> <span>Reports</span></a>
+        <a href="#" class="nav-link"><i class="fa fa-user-shield"></i> <span>User Management</span></a>
+        
+        <button class="btn-quick">+ QUICK ADD STOCK</button>
+    </nav>
+
+    <div class="main-content">
+        <header class="topbar">
+            <h2>Welcome, Admin!</h2>
+            <div class="user-info">
+                <span class="badge">Admin Account <i class="fa fa-circle-user"></i></span>
+            </div>
+        </header>
+
+        <div class="dashboard-body">
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <h4>Today's Sales</h4>
+                        <div class="stat-icon-wrap icon-blue"><i class="fa fa-coins stat-icon"></i></div>
+                    </div>
+                    <div class="value">250,000 <small>UGX</small></div>
+                    <div class="trend" style="color: #28a745;"><i class="fa fa-arrow-up"></i> 10% from yesterday</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <h4>Available Stock</h4>
+                        <div class="stat-icon-wrap icon-green"><i class="fa fa-warehouse stat-icon"></i></div>
+                    </div>
+                    <div class="value">120 <small>Items</small></div>
+                    <div class="trend" style="color: var(--text-muted);">In 120 categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <h4>Active Customers</h4>
+                        <div class="stat-icon-wrap icon-orange"><i class="fa fa-user-check stat-icon"></i></div>
+                    </div>
+                    <div class="value">45</div>
+                    <div class="trend" style="color: var(--text-muted);">Active today</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <h4>Credit Balance</h4>
+                        <div class="stat-icon-wrap icon-red"><i class="fa fa-hand-holding-dollar stat-icon"></i></div>
+                    </div>
+                    <div class="value text-danger">800k <small>UGX</small></div>
+                    <div class="trend text-danger"><i class="fa fa-warning"></i> 5 Items critical stock</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Sales Over the Week</h3>
+                    <div class="chart-visual-container">
+                        <div style="height: 100%; width: 100%; position: relative;">
+                            <div style="position: absolute; bottom: 0; left: 10%; width: 8%; height: 60%; background: #e3f2fd; border-radius: 4px 4px 0 0;"></div>
+                            <div style="position: absolute; bottom: 0; left: 25%; width: 8%; height: 75%; background: #e3f2fd; border-radius: 4px 4px 0 0;"></div>
+                            <div style="position: absolute; bottom: 0; left: 40%; width: 8%; height: 90%; background: #e3f2fd; border-radius: 4px 4px 0 0;"></div>
+                            <div style="position: absolute; bottom: 0; left: 55%; width: 8%; height: 65%; background: #e3f2fd; border-radius: 4px 4px 0 0;"></div>
+                            <div style="position: absolute; bottom: 0; left: 70%; width: 8%; height: 85%; background: #e3f2fd; border-radius: 4px 4px 0 0;"></div>
+                            <div style="position: absolute; bottom: 0; left: 85%; width: 8%; height: 100%; background: #e3f2fd; border-radius: 4px 4px 0 0;"></div>
+                            
+                            <div style="position: absolute; top: 20px; left: 50%; width: 20px; height: 20px; background: #27ae60; border-radius: 50%; opacity: 0.8;"></div>
+                            <div style="position: absolute; bottom: 40px; right: 20px; width: 10px; height: 10px; background: #27ae60; border-radius: 50%;"></div>
+                            <div class="chart-placeholder">CSS Bar/Line chart matching image</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #28a745; font-weight: 600;"><i class="fa fa-chart-line"></i> Sales: UGX 2,500,000 this week</p>
+                </div>
+
+                <div class="content-box">
+                    <h3>Stock Status</h3>
+                    <div class="chart-visual-container" style="height: 150px;">
+                        <div style="width: 20px; height: 80%; background: #27ae60; border-radius: 4px;"></div>
+                        <div style="width: 20px; height: 60%; background: #3498db; border-radius: 4px;"></div>
+                        <div style="width: 20px; height: 50%; background: #f39c12; border-radius: 4px;"></div>
+                        <div style="width: 20px; height: 30%; background: #e74c3c; border-radius: 4px;"></div>
+                    </div>
+                    <h4>Top Selling Products</h4>
+                    <p class="small text-muted mb-2">Sugar, Rice, Bread, Beans, Flour</p>
+                    <table class="small">
+                        <tr><td>Sugar</td><td><span class="pill danger">Low Stock</span></td></tr>
+                        <tr><td>Rice</td><td><span class="pill success">Paid</span></td></tr>
+                        <tr><td>Cement</td><td><span class="pill warning">Credit</span></td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-box">
+                    <h3>Recent Activity</h3>
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <i class="fa fa-coins timeline-icon text-primary"></i>
+                            <div class="timeline-content">
+                                <p>Sale of 50,000 UGX to John</p>
+                                <span>5 minutes ago</span>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <i class="fa fa-plus-circle timeline-icon text-success"></i>
+                            <div class="timeline-content">
+                                <p>Added 50 bags of Sugar to stock</p>
+                                <span>30 minutes ago</span>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <i class="fa fa-user-plus timeline-icon text-info"></i>
+                            <div class="timeline-content">
+                                <p>New customer Mary added</p>
+                                <span>1 hr ago</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-box">
+                    <h3>Critical Alerts</h3>
+                    <div style="border-left: 4px solid #e74c3c; padding: 10px; margin-bottom: 15px; background: #fff5f5; border-radius: 4px;">
+                        <strong class="text-danger small"><i class="fa fa-warning"></i> Low Stock:</strong><p class="small">Sugar - Only 2 left</p>
+                    </div>
+                    <div style="border-left: 4px solid #f39c12; padding: 10px; background: #fffaf0; border-radius: 4px;">
+                        <strong class="text-warning small"><i class="fa fa-clock"></i> Pending Credit:</strong><p class="small">John Doe owes 200,000 UGX</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-row">
+                <button class="btn-action btn-green"><i class="fa fa-plus"></i> Add Sale</button>
+                <button class="btn-action btn-blue"><i class="fa fa-box"></i> Add Stock</button>
+                <button class="btn-action btn-red"><i class="fa fa-user-plus"></i> Add User</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
