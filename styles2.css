@@ -219,14 +219,6 @@ body {
 }
 
 /* Charts */
-:root {
-  --primary: #3498db;
-  --success: #27ae60;
-  --warning: #f39c12;
-  --danger: #e74c3c;
-  --bg-light: #f8f9fa;
-  --text-main: #2c3e50;
-}
 .content-grid {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
@@ -486,44 +478,138 @@ td {
   background: #e74c3c;
 }
 
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: px) {
-  body {
-    flex-direction: column;
-  }
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-    padding: 10px;
-    border-right: none;
-    border-bottom: 1px solid #e1e4e8;
-  }
-  .sidebar .brand,
-  .btn-quick,
-  .nav-link span {
-    display: none;
-  }
-  .nav-link {
-    padding: 10px;
-    border-radius: 6px;
-  }
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* sidebar small screen */
+@media screen and (max-width: 900px) {
+    /* 1. Stack sidebar on top of main content */
+    .container {
+        flex-direction: column;
+    }
 
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-  .topbar {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  .action-row {
-    flex-direction: column;
-  }
+    /* 2. Adjust Sidebar into a top header */
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        border-right: none;
+        border-bottom: 1px solid #e1e4e8;
+    }
+
+    /* 3. Keep Brand at the very top, centered */
+    .brand {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .brand p, .logo, .btn-quick {
+        display: none; /* Hide clutter for mobile */
+    }
+
+    /* 4. Grid Arrangement: 3 Columns, 2 Rows */
+    /* Note: Ensure your links are wrapped in a container, 
+       if not, we target the sidebar itself excluding the brand */
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr; /* Row for Brand */
+        gap: 15px;
+    }
+
+    /* Assuming your nav links are direct children or in a div */
+    /* We create a sub-grid for the links */
+    .nav-menu-container { 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+        grid-template-rows: repeat(2, auto);    /* 2 Rows */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-link {
+        justify-content: center; /* Center icons/text in the box */
+        padding: 15px 5px;
+        margin: 0;
+        font-size: 0.8rem;
+        background: rgba(255, 255, 255, 0.1);
+        flex-direction: column; /* Stack icon above text */
+        gap: 5px;
+        text-align: center;
+    }
+
+    /* 5. Main Content Adjustments */
+    .main-content {
+        width: 100%;
+    }
+
+    .topbar {
+        display: none; /* Hide topbar to avoid double headers */
+    }
+
+    /* 6. Dashboard Grid Fixes */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    .content-box {
+        width: auto;
+        margin: 10px 0;
+    }
+}
+/* dashboard body */
+@media screen and (max-width: 900px) {
+    /* 1. Reset the Dashboard Body */
+    .dashboard-body {
+        padding: 15px;      /* Reduced from 30px to save space */
+        width: 100%;        /* Ensure it takes full width */
+        box-sizing: border-box; /* Crucial: includes padding in width calculation */
+    }
+
+    /* 2. Fix the Stats Grid (Top 4 cards) */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 layout is best for tablets */
+        gap: 12px;          /* Tighter gap */
+        margin-bottom: 20px;
+    }
+
+    .stat-card {
+        padding: 15px;      /* Smaller padding inside cards */
+    }
+
+    .stat-card .value {
+        font-size: 1.2rem;  /* Shrink text so it doesn't wrap awkwardly */
+    }
+
+    /* 3. Fix the Content Grid (Charts/Stock section) */
+    .content-grid {
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        background: transparent;    /* Remove purple background for a cleaner mobile look */
+        gap: 15px;
+        margin-bottom: 20px;
+        border-radius: 0;           /* Optional: remove large radius on mobile */
+    }
+
+    /* 4. Reset Content Box restrictions */
+    .content-box {
+        width: 100% !important;     /* Force full width */
+        margin: 0 !important;       /* Remove the 20px side margins */
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 12px;        /* Maintain rounded corners */
+    }
+
+    /* 5. Fine-tune for very small phones */
+    @media (max-width: 480px) {
+        .stats-grid {
+            grid-template-columns: 1fr; /* 1 column for phones */
+        }
+        
+        .dashboard-body {
+            padding: 10px; /* Even tighter padding */
+        }
+    }
 }
