@@ -640,5 +640,88 @@ tbody tr {
   color:#402d53
  }
  .status h4 i { color: #16a34a  }
+/* responsive sales page */
 
+/* --- RESPONSIVE MOBILE FIXES --- */
+
+@media (max-width: 768px) {
+    /* 1. General Layout Adjustments */
+    .customerInfo {
+        width: 95%;
+        margin: 20px auto; /* Centers the card on mobile */
+    }
+
+    /* 2. Customer Info Grid (Top section) */
+    .customerKid {
+        grid-template-columns: 1fr; /* Stack inputs vertically */
+        row-gap: 15px;
+    }
+
+    /* 3. Product Entry Grid (The line with 4 columns) */
+    .customerKids {
+        grid-template-columns: 1fr; /* Stack everything */
+        row-gap: 10px;
+        padding: 15px;
+    }
+
+    .pdtbtn {
+        margin-top: 10px;
+        width: 100%; /* Make button full width on mobile */
+    }
+
+    /* 4. The Bottom Form (Row to Column) */
+    .customerkids2 {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .customerkids2 label {
+        margin-top: 10px;
+        padding-left: 0;
+    }
+
+    .customerkids2 input {
+        width: 100%; /* Fixes the 300px overflow issue */
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* 5. The Receipt Action Buttons (Grid 3 cols to stack) */
+    .receipts {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+
+    /* 6. Table Responsiveness */
+    /* If the table is too wide, it will now scroll instead of breaking the box */
+    .customerInfo {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 500px; /* Forces a slight scroll to keep data readable */
+    }
+
+    /* 7. Summary Row (Totals) */
+    .twoends {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        font-size: 22px;
+    }
+    
+    #date {
+        font-size: 16px;
+    }
+
+    .headings h2 {
+        font-size: 13px;
+    }
+}
  

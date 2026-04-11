@@ -524,6 +524,8 @@ td {
     grid-template-rows: repeat(2, auto); /* 2 Rows */
     gap: 10px;
     width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none
   }
 
   .nav-link {
@@ -543,6 +545,7 @@ td {
   }
 
   .topbar {
+    overflow-x: hidden;
     display: none; /* Hide topbar to avoid double headers */
   }
 
@@ -562,13 +565,18 @@ td {
     margin: 10px 0;
   }
 }
-/* dashboard body */
+/* dashboard small body */
 @media screen and (max-width: 900px) {
+  .container{
+    width:100%;
+  }
   /* 1. Reset the Dashboard Body */
   .dashboard-body {
     padding: 15px; /* Reduced from 30px to save space */
-    width: 100%; /* Ensure it takes full width */
+    width: 96%; /* Ensure it takes full width */
     box-sizing: border-box; /* Crucial: includes padding in width calculation */
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
   }
 
   /* 2. Fix the Stats Grid (Top 4 cards) */
@@ -598,7 +606,7 @@ td {
   /* 4. Reset Content Box restrictions */
   .content-box {
     width: 100% !important; /* Force full width */
-    margin: 0 !important; /* Remove the 20px side margins */
+    /* margin: 0 !important; Remove the 20px side margins */
     box-sizing: border-box;
     padding: 20px;
     border-radius: 12px; /* Maintain rounded corners */
@@ -993,7 +1001,7 @@ td {
         overflow-x: auto; /* Adds horizontal scroll to the table only */
         -webkit-overflow-scrolling: touch;
     }
-    
+
     td, th {
         padding: 10px 8px;
         font-size: 0.85rem;
