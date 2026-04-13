@@ -195,7 +195,7 @@ nav .fa {
 /* Core Styling and Reset */
 body {
   margin: 0;
-  background-color: #f7f9fc; /* Light background from original image */
+  background-color: #f7f9fc;
   color: #333;
   font-size: 14px;
 }
@@ -214,6 +214,9 @@ body {
   margin-top: 20px;
   font-size: 25px;
   font-weight: bold;
+}
+.navbar a{
+  text-decoration: none;
 }
 .navbar h2{
   font-size: 38px;
