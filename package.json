@@ -1,0 +1,20 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Daniella-Pearl/Final-Project#readme",
+  "bugs": {
+    "url": "https://github.com/Daniella-Pearl/Final-Project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daniella-Pearl/Final-Project.git"
+  },
+  "license": "ISC",
+  "author": "Daniella",
+  "type": "commonjs",
+  "main": "styles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
