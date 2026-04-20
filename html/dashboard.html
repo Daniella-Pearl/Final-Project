@@ -6,8 +6,8 @@
     <title>NyondoStock</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="styles2.css" />
-     <link
+    <link rel="stylesheet" href="../public/css/styles2.css" />
+    <link
       href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
@@ -21,44 +21,51 @@
       <nav class="sidebar">
         <div class="brand">
           <img
-            src="./images/generated-1774986091754.png"
+            src="../public/images/generated-1774986091754.png"
             alt="NyondoStock"
             class="logo"
           />
           <h1>NyondoStock System</h1>
-          <p>Welcome back, Manager!</p>
+          <p>Welcome back! Admin. Track Business Progress.</p>
         </div>
         <div class="nav-menu-container">
-        <a href="#" class="nav-link"
-          ><i class="fa fa-th-large"></i> <span>Dashboard</span></a
-        >
-        <a href="#" class="nav-link"
-          ><i class="fa fa-box"></i> <span>Stock Management</span></a
-        >
-        <a href="#" class="nav-link"
-          ><i class="fa fa-shopping-cart"></i> <span>Sales Management</span></a
-        >
-        <a href="#" class="nav-link"
-          ><i class="fa fa-users"></i> <span>Customer Scheme</span></a
-        >
-        <a href="#" class="nav-link"
-          ><i class="fa fa-chart-line"></i> <span>Reports</span></a>
+          <a href="#" class="nav-link"
+            ><i class="fa fa-th-large"></i> <span>Dashboard</span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-box"></i> <span>Stock Management</span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-shopping-cart"></i>
+            <span>Sales Management</span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-users"></i> <span>Customer Scheme</span></a
+          >
+          <a href="#" class="nav-link"
+            ><i class="fa fa-chart-line"></i> <span>Reports</span></a
+          >
+
           <a href="./messages.html" class="nav-link"
-          ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
-        >
-         <a href="./login.html" class="nav-link"
-          ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
-        >
-</div>
-        <button class="btn-quick" type="button">+ QUICK ADD STOCK</button>
+            ><i class="fa fa-comment-dots"></i>
+            <span>Messages</span></a
+          >
+          <a href="./register.html" class="nav-link"
+            ><i class="fa fa-user-shield"></i> <span>User Management</span></a
+          >
+          <a href="./login.html" class="nav-link"
+            ><i class="fa fa-right-from-bracket"></i> <span>Log out</span></a
+          >
+        </div>
+        <button class="btn-quick">+ QUICK ADD STOCK</button>
       </nav>
 
       <div class="main-content">
         <header class="topbar">
-          <h2>Welcome, Manager!</h2>
+          <h2>Welcome, Admin!</h2>
           <div class="user-info">
             <span class="badge"
-              >Manager Account <i class="fa fa-circle-user"></i
+              >Admin Account <a href=""><i class="fa fa-circle-user"></i></a
             ></span>
           </div>
         </header>
@@ -126,11 +133,7 @@
                   <div class="bar" style="--height: 90%" data-day="Wed"></div>
                   <div class="bar" style="--height: 65%" data-day="Thu"></div>
                   <div class="bar" style="--height: 85%" data-day="Fri"></div>
-                  <div
-                    class="bar"
-                    style="height: 100%"
-                    data-day="Sat"
-                  ></div>
+                  <div class="bar" style="height: 100%" data-day="Sat"></div>
                 </div>
               </div>
               <p class="sales-total">
@@ -238,6 +241,11 @@
             <button class="btn-action btn-blue">
               <i class="fa fa-box"></i> Add Stock
             </button>
+            <a href="./register.html">
+              <button type="button" class="btn-action btn-red">
+                <i class="fa fa-user-plus"></i> Add User
+              </button></a
+            >
           </div>
         </div>
       </div>
