@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="../public/css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
     <!-- navbar -->
@@ -33,20 +33,21 @@
         </h2>
       </div>
       <div class="customerBox">
-        <form action="">
+        <form action="/sales">
           <div class="customerKid">
             <div class="customerkids">
               <label for="customername"> Customer Name</label>
               <input
                 type="search"
                 id="customername"
+                name="customername"
                 placeholder="🔍Search Customer"
                 required
               />
             </div>
             <div class="customerkids">
               <label for="phoneNumber">Phone Number</label>
-              <input type="tel" id="phoneNumber" placeholder="0740898912" />
+              <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="0740898912" />
             </div>
           </div>
           <div class="balance">
@@ -70,24 +71,25 @@
         </h2>
       </div>
       <div class="customerBox">
-        <form action="">
+        <form action="/sales">
           <div class="customerKids">
             <div class="customerkids">
               <label for="productName">Product</label>
               <input
                 type="search"
                 id="productName"
+                name="productName"
                 placeholder="🔍Search Product"
                 required
               />
             </div>
             <div class="customerkids">
               <label for="quantity"> Quantity</label>
-              <input type="number" id="quantity" placeholder="0" required />
+              <input type="number" id="quantity" name="quantity" placeholder="0" required />
             </div>
             <div class="customerkids">
               <label for="price"> Price(UGX) </label>
-              <input type="text" id="price" placeholder="Auto" required />
+              <input type="text" id="price" name="price" placeholder="Auto" required />
             </div>
             <div class="customerkids">
               <button type="submit" class="pdtbtn" onclick="addRow()">+</button>
@@ -171,11 +173,12 @@
             </tr>
           </tbody>
         </table>
-        <form class="customerkids2">
+        <form action="/sales" class="customerkids2">
           <label for="total">Total In Cart</label>
           <input
             type="text"
             id="total"
+            name="totalInCart"
             inputmode="numeric"
             pattern="[0-9]*"
             placeholder="0 UGX"
@@ -196,7 +199,7 @@
         </h2>
       </div>
       <div class="customerBox">
-        <form action="">
+        <form action="/sales">
           <div class="transport">
             <h3>
               <i class="fa-solid fa-truck" style="color: rgb(177, 151, 252)"></i
@@ -205,11 +208,11 @@
             <div class="customerKid">
               <div class="customerkids">
                 <label for="distance">Distance(km)</label>
-                <input type="number" id="distance" placeholder="0" required />
+                <input type="number" id="distance" name="distance" placeholder="0" required />
               </div>
               <div class="customerkids">
                 <label for="deliveryfee">Delivery Fee</label>
-                <input type="text" id="deliveryfee" placeholder="Auto" />
+                <input type="text" id="deliveryfee" name="deliveryfee" placeholder="Auto" />
               </div>
             </div>
             <div class="customerkids">
@@ -240,7 +243,7 @@
       <!-- payment calculations -->
       <div class="balance">
         <h3>Payment Calculations</h3>
-        <form action="">
+        <form action="/sales">
           <div class="transport">
             <div class="balances">
               <div class="customerkids">
@@ -248,6 +251,7 @@
                 <input
                   type="number"
                   id="amountpaid"
+                  name="amountpaid"
                   placeholder="Enter Amount Paid"
                   required
                 />
@@ -266,17 +270,17 @@
       <!-- payment type -->
       <div class="balance">
         <h3 id="heading3">Payment Type</h3>
-        <form action="">
+        <form action="/sales">
           <div class="type">
             <label>
-              <input type="radio" name="choice" value="option1" />
+              <input type="radio" name="choices" value="option1" />
               💷Cash
             </label>
           </div>
 
           <div class="type">
             <label>
-              <input type="radio" name="choice" value="option2" />
+              <input type="radio" name="choices" value="option2" />
               📝 Credit
             </label>
           </div>
@@ -343,5 +347,7 @@
         >
       </div>
     </div>
+    
+        <button type="submit">DONE</button>
   </body>
 </html>

@@ -1,0 +1,149 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title NyondoStock
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(rel='stylesheet' href='/css/styles5.css')
+  link(href='https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+.container
+  nav.sidebar
+    .brand
+      img.logo(src='/images/generated-1774986091754.png' alt='NyondoStock')
+      h1 NyondoStock System
+      p Messages Section
+    .nav-menu-container
+      .nav-item.dropdown
+        a.nav-link(href='#')
+          i.fa.fa-th-large
+          span Account
+        .roles
+          ul
+            .role
+              li
+                a.role-item.admin(href='/dashboard') Admin
+            .role
+              li
+                a.role-item.manager(href='/mgrDashboard') Manager
+            .role
+              li
+                a.role-item.cashier(href='/salesdashboard') Sales Management
+            .role
+              li
+                a.role-item.sales(href='/stockmgtpage') Stock Management
+      //
+        <a href="#" class="nav-link"
+        ><i class="fa fa-users"></i> <span>Supplier Registration</span></a
+        >
+        <a href="stockmgtpage.html#stform" class="nav-link"
+        ><i class="fa fa-box"></i> <span>Stock Management Form</span></a
+        >
+        <a href="./inventory.html" class="nav-link"
+        ><i class="fa fa-shopping-cart"></i> <span>Stock Inventory</span></a
+        >
+        <a href="#" class="nav-link"
+        ><i class="fa fa-users"></i> <span>Supplier Credit</span></a
+        >
+        <a href="#" class="nav-link"
+        ><i class="fa fa-comment-dots"></i> <span>Messages</span></a
+        >
+      a.nav-link(href='/')
+        i.fa.fa-right-from-bracket
+        span Log out
+  .main-content
+    header.topbar
+      h2 Messages
+    .messaging-layout
+      aside.chat-sidebar
+        .search-container
+          .search-input-wrapper
+            i.fa.fa-magnifying-glass
+            input(type='text' placeholder='Search...')
+        .role-selector
+          | Filter by Role 
+          i.fa.fa-caret-down
+        .contact-list
+          .contact.active
+            .avatar-box
+            .contact-info
+              .contact-top
+                span.contact-name Evelyn
+                span.contact-time 11:30 AM
+              .contact-role Admin
+              p.contact-preview Please update the stock...
+            .badge 2
+          .contact
+            .avatar-box
+            .contact-info
+              .contact-top
+                span.contact-name Alex
+                span.contact-time 11:00 AM
+              .contact-role Manager
+              p.contact-preview
+                | I&apos;ll follow up with the supplier...
+          .contact
+            .avatar-box
+            .contact-info
+              .contact-top
+                span.contact-name Sarah
+                span.contact-time 10:45 AM
+              .contact-role Cashier
+              p.contact-preview
+                | Can you check a transaction f...
+            .badge 1
+          .contact
+            .avatar-box
+            .contact-info
+              .contact-top
+                span.contact-name Mike
+                span.contact-time Yesterday
+              .contact-role Salesperson
+              p.contact-preview
+                | I&apos;ve restocked the items you a...
+      main.chat-pane
+        .chat-pane-header
+          .header-avatar
+          div
+            strong Evelyn
+            p
+              | Admin &bull;
+              span  Active 1 hour ago
+        .messages-container
+          .bubble.received
+            | I&apos;ve updated the records. How do they look?
+            span.timestamp 10:00 AM
+          .bubble.sent
+            | The records look great! Can you also verify the supplier
+            | payments?
+            span.timestamp 11:20 AM
+          .bubble.received
+            | Sure, I&apos;ll confirm the supplier payments and let you know the
+            | details soon.
+            span.timestamp 11:20 AM
+          .bubble.sent
+            | Thank you!
+            span.timestamp 11:30 AM
+        .message-input-bar
+          i.fa.fa-face-smile
+          input(type='text' placeholder='Type a message...')
+          i.fa.fa-paperclip
+          i.fa.fa-paper-plane(style='color: white')
+      aside.roles-pane
+        .roles-card
+          h3
+            i.fa.fa-shield
+            |  Staff Roles
+          .role-btn.admin
+            i.fa.fa-user-shield
+            |  Admin
+          .role-btn.manager
+            i.fa.fa-briefcase
+            |  Manager
+          .role-btn.cashier
+            i.fa.fa-money-bill-1-wave
+            |  Cashier
+          .role-btn.sales
+            i.fa.fa-bullhorn
+            |  Salesperson

@@ -1,0 +1,185 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title NyondoStock
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(rel='stylesheet' href='/css/styles2.css')
+  link(href='https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Miniver&family=Montagu+Slab:opsz,wght@16..144,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Sofia&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+.container
+  nav.sidebar
+    .brand
+      img.logo(src='/images/generated-1774986091754.png' alt='NyondoStock')
+      h1 NyondoStock System
+      p Welcome back! Admin. Track Business Progress.
+    .nav-menu-container
+      a.nav-link(href='#')
+        i.fa.fa-th-large
+        span Dashboard
+      a.nav-link(href='/stockmgtpage')
+        i.fa.fa-box
+        span Stock Management
+      a.nav-link(href='/salesdashboard')
+        i.fa.fa-shopping-cart
+        span Sales Management
+      a.nav-link(href='/customerscheme')
+        i.fa.fa-users
+        span Customer Scheme
+      a.nav-link(href='/reports')
+        i.fa.fa-chart-line
+        span Reports
+      a.nav-link(href='/messages')
+        i.fa.fa-comment-dots
+        span Messages
+      a.nav-link(href='/register')
+        i.fa.fa-user-shield
+        span User Management
+      a.nav-link(href='/')
+        i.fa.fa-right-from-bracket
+        span Log out
+    button.btn-quick + QUICK ADD STOCK
+  .main-content
+    header.topbar
+      h2 Welcome, Admin!
+      .user-info
+        span.badge
+          | Admin Account 
+          a(href='')
+            i.fa.fa-circle-user
+    .dashboard-body
+      .stats-grid
+        .stat-card
+          .stat-top
+            h4 Today&apos;s Sales
+            .stat-icon-wrap.icon-blue
+              i.fa.fa-coins.stat-icon
+          .value
+            | 250,000 
+            small UGX
+          .trend(style='color: #2d703d')
+            i.fa.fa-arrow-up
+            |  10% from yesterday
+        .stat-card
+          .stat-top
+            h4 Available Stock
+            .stat-icon-wrap.icon-green
+              i.fa.fa-warehouse.stat-icon
+          .value
+            | 120 
+            small Items
+          .trend(style='color: rgb(125, 93, 32)')
+            | In 120 categories
+        .stat-card
+          .stat-top
+            h4 Active Customers
+            .stat-icon-wrap.icon-orange
+              i.fa.fa-user-check.stat-icon
+          .value 45
+          .trend(style='color: var(--text-muted)')
+            | Active today
+        .stat-card
+          .stat-top
+            h4 Credit Balance
+            .stat-icon-wrap.icon-red
+              i.fa.fa-hand-holding-dollar.stat-icon
+          .value.text-danger
+            | 800k 
+            small UGX
+          .trend.text-danger.critical
+            i.fa.fa-warning(style='color: red')
+            |  5 Items
+            |                 critical stock
+      .content-grid
+        .content-box
+          h3 Sales Over the Week
+          .chart-visual-container
+            .bar-chart
+              .bar(style='--height: 60%' data-day='Mon')
+              .bar(style='--height: 75%' data-day='Tue')
+              .bar(style='--height: 90%' data-day='Wed')
+              .bar(style='--height: 65%' data-day='Thu')
+              .bar(style='--height: 85%' data-day='Fri')
+              .bar(style='height: 100%' data-day='Sat')
+          p.sales-total
+            i.fa.fa-chart-line
+            |  Sales:
+            strong UGX 2,500,000
+            |  this week
+        .content-box
+          h3 Stock Status
+          .stock-visual-container
+            .stock-item
+              span.label Cement
+              .progress-bg
+                .progress-bar.danger(style='width: 20%')
+            .stock-item
+              span.label Iron Sheets
+              .progress-bg
+                .progress-bar.success(style='width: 85%')
+            .stock-item
+              span.label Paint
+              .progress-bg
+                .progress-bar.warning(style='width: 45%')
+          h4 Quick Status
+          table.status-table
+            tr
+              td Cement
+              td
+                span.pill.danger Low Stock
+            tr
+              td IronSheets
+              td
+                span.pill.success Paid
+            tr
+              td Paint
+              td
+                span.pill.warning Credit
+      .content-grid
+        .content-box
+          h3 Recent Activity
+          ul.timeline
+            li.timeline-item
+              i.fa.fa-coins.timeline-icon.text-primary
+              .timeline-content
+                p Sale of 50,000 UGX to John
+                span 5 minutes ago
+            li.timeline-item
+              i.fa.fa-plus-circle.timeline-icon.text-success
+              .timeline-content
+                p Added 50 bags of Sugar to stock
+                span 30 minutes ago
+            li.timeline-item
+              i.fa.fa-user-plus.timeline-icon.text-info
+              .timeline-content
+                p New customer Mary added
+                span 1 hr ago
+        .content-box
+          h3 Critical Alerts
+          .critical
+            strong.text-danger.small
+              i.fa.fa-warning
+              |  Low Stock:
+            p.small Cement - Only 10 Bags left
+          .pending
+            strong.text-warning.small
+              i.fa.fa-clock
+              |  Pending Credit:
+            p.small John Doe owes 200,000 UGX
+          .transit
+            strong.text-warning.small
+              i.fa.fa-truck
+              |  Pending Delivery
+            p.small 12 Bags Of Cement to Peter J.
+      .action-row
+        button.btn-action.btn-green(type='submit')
+          i.fa.fa-plus
+          |  Add Sale
+        button.btn-action.btn-blue(type='submit')
+          i.fa.fa-box
+          |  Add Stock
+        a(href='/register')
+          button.btn-action.btn-red(type='button')
+            i.fa.fa-user-plus
+            |  Add User
